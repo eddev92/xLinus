@@ -9,8 +9,14 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { SaludComponent} from './components/salud/salud.component';
 import { AlimentacionComponent } from './components/alimentacion/alimentacion.component';
 
+// Components Material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCheckboxModule, MdTabsModule } from '@angular/material';
+
 export const ROUTES: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '',redirectTo: '/dashboard',pathMatch: 'full'},
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'educacion', component: EducacionComponent },
   { path: 'salud', component: SaludComponent },
   { path: 'alimentacion', component: AlimentacionComponent }
@@ -26,7 +32,12 @@ export const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+   // NoopAnimationsModule,
+    BrowserAnimationsModule,
+    MdCheckboxModule,
+    MdButtonModule,
+    MdTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

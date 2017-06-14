@@ -3,12 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { SaludComponent } from './salud.component';
 
+// Component Material
+import { MdButtonModule, MdCheckboxModule, MdTabsModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     SaludComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+   // BrowserAnimationsModule,
+    MdCheckboxModule,
+    MdButtonModule,
+    MdTabsModule
   ],
   providers: [],
   bootstrap: [SaludComponent]
