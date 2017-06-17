@@ -1,4 +1,20 @@
-<md-tab-group>
-  <md-tab label="Tab 1">Content 1</md-tab>
-  <md-tab label="Tab 2">Content 2</md-tab>
-</md-tab-group>
+ <div class="tab row">
+  <button class="tablinks col-4" (click)="openCity(event, 'peso')">Peso</button>
+  <button class="tablinks col-4" (click)="openCity(event, 'talla')">Talla</button>
+  <button class="tablinks col-4" (click)="openCity(event, 'otros')">Otros</button>
+</div>
+
+<div id="peso" class="tabcontent">
+  <h3>Peso</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="talla" class="tabcontent">
+  <h3>Talla</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="otros" class="tabcontent">
+  <h3>Otros</h3>
+  <p>En construccion</p>
+</div>
