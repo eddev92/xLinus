@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { SaludComponent } from './salud.component';
 
 // Component Material
-import { MdButtonModule, MdCheckboxModule, MdTabsModule } from '@angular/material';
+import { MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,9 @@ import { MdButtonModule, MdCheckboxModule, MdTabsModule } from '@angular/materia
     BrowserModule,
    // BrowserAnimationsModule,
     MdCheckboxModule,
+    MdDatepickerModule,
     MdButtonModule,
+    MdNativeDateModule,
     MdTabsModule
   ],
   providers: [],

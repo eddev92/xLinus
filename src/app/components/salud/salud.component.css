@@ -40,6 +40,16 @@ div.tab button.active {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+.head{
+	margin-top: 44px;
+}
+.head h3, .head p{
+	    margin: auto;
+}
+
+.mainPeso{
+	padding: 30px 200px
+}
 
 @keyframes fadeEffect {
     from {opacity: 0;}

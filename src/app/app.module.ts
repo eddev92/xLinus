@@ -12,7 +12,7 @@ import { AlimentacionComponent } from './components/alimentacion/alimentacion.co
 // Components Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdTabsModule } from '@angular/material';
+import { MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
 
 export const ROUTES: Routes = [
   { path: '',redirectTo: '/dashboard',pathMatch: 'full'},
@@ -35,6 +35,8 @@ export const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
    // NoopAnimationsModule,
     BrowserAnimationsModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
     MdCheckboxModule,
     MdButtonModule,
     MdTabsModule
