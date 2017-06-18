@@ -10,20 +10,38 @@
  			 <p>(*) Administra el control de peso de tu bebe.</p>
 		</div>
 	<div class="row mainPeso">
-		<div class="col-6">
-			<form>
-			<label>Fecha del último pesaje :</label>
+		<div class="col-xs-12 col-md-6">
+			<form class="col-12">
+			<div class="input-date">
+				<label>Fecha del último pesaje</label><br>
 			  	<input type="date" name="date">
+			</div>
+			  	<md-input-container>
+			  <input mdInput placeholder="Ingresa el peso (KG)" value="">
+			</md-input-container>
 			</form>
 		</div>
-		<div class="col-6">
-			<table>
-				<thead>
-					
-				</thead>
-				<tbody>
-				
-				</tbody>
+		<div class="col-xs-12 col-md-6">
+			<table class="table table-responsive table-bordered">
+			  <thead class="thead-inverse">
+			    <tr>
+			      <th>#</th>
+			      <th>Fecha</th>
+			      <th>Peso</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  <tr>
+			  	<th></th>
+			  	<td></td>
+			  	<td></td>
+			  </tr>
+			   <!--  <tr>
+			      <th scope="row">1</th>
+			      <td>Otto</td>
+			      <td>@mdo</td>
+			    </tr> -->
+			  </tbody>
 			</table>
 		</div>		
 	</div>  

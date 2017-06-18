@@ -1,15 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SaludService } from './../salud/salud.service';
+import { serviceConstant } from '../../core/core.services';
+import 'rxjs/add/operator/toPromise';
+
+import 'rxjs/add/operator/startWith';
+import 'rxjs/add/operator/map';
+
 @Component({
   selector: 'salud',
   templateUrl: './salud.component.html',
-  styleUrls: ['./salud.component.css']
+  styleUrls: ['./salud.component.css'],
+  providers: [SaludService]
 })
-export class SaludComponent {
+export class SaludComponent implements OnInit{
 
-	 constructor(private route: ActivatedRoute) {}
+	 constructor(private saludService: SaludService,
+	 				public route: ActivatedRoute) {
 
-   ngOnInit() {}
+	 }
+
+  public ngOnInit() {
+
+  	this.saludService.getRegisters().subscribe(
+     data => {       
+        console.log(data, "data")
+      },
+      error => {
+      	console.log(error, "error =/")
+      }
+   	);
+
+	
+  }
+
 
   public openCity(evt, cityName) {
     let i, tabcontent, tablinks;

@@ -1,18 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-
+import { HttpModule, JsonpModule } from '@angular/http';
 // Components
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { SaludComponent} from './components/salud/salud.component';
 import { AlimentacionComponent } from './components/alimentacion/alimentacion.component';
-
+// Services
+import { serviceConstant } from './core/core.services';
 // Components Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import { MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
+import { MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
 
 export const ROUTES: Routes = [
   { path: '',redirectTo: '/dashboard',pathMatch: 'full'},
@@ -33,15 +34,18 @@ export const ROUTES: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
+    JsonpModule,
+    HttpModule,
    // NoopAnimationsModule,
     BrowserAnimationsModule,
+    MdInputModule,
     MdDatepickerModule,
     MdNativeDateModule,
     MdCheckboxModule,
     MdButtonModule,
     MdTabsModule
   ],
-  providers: [],
+  providers: [serviceConstant],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
