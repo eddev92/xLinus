@@ -10,7 +10,7 @@ export class SaludService {
 
 	getRegisters(): Observable<any> {
 
-	return this.serviceConstant.get('peso').map((res:Response) => res.json());
+	return this.serviceConstant.get('peso');
 	  }
 
 }

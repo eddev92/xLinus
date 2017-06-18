@@ -17,6 +17,8 @@ import 'rxjs/add/operator/map';
 })
 export class SaludComponent implements OnInit{
 
+	public weightRegisters:any[];
+
 	 constructor(private saludService: SaludService,
 	 				public route: ActivatedRoute) {
 
@@ -26,7 +28,8 @@ export class SaludComponent implements OnInit{
 
   	this.saludService.getRegisters().subscribe(
      data => {       
-        console.log(data, "data")
+     	this.weightRegisters = data;
+        console.log(this.weightRegisters, "weightRegisters")
       },
       error => {
       	console.log(error, "error =/")
