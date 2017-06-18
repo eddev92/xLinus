@@ -66,9 +66,12 @@ form{
 	margin-bottom: 30px;
 
 }
-th{
-	padding: 11px 60px;
+td{
+	text-align: center;
 }
 table{
 	padding: 0 48px;
+}
+.mainPeso button{
+	margin-top: 25px;
 }

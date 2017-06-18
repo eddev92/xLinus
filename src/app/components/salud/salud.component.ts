@@ -17,19 +17,17 @@ import 'rxjs/add/operator/map';
 })
 export class SaludComponent implements OnInit{
 
-	public weightRegisters:any[];
-
+	public Registers:any[];
+	public a:any;
 	 constructor(private saludService: SaludService,
-	 				public route: ActivatedRoute) {
-
-	 }
+	 				public route: ActivatedRoute) {}
 
   public ngOnInit() {
-
   	this.saludService.getRegisters().subscribe(
      data => {       
-     	this.weightRegisters = data;
-        console.log(this.weightRegisters, "weightRegisters")
+     	this.Registers = data;
+
+        console.log(this.Registers, "Registers")
       },
       error => {
       	console.log(error, "error =/")
@@ -39,7 +37,10 @@ export class SaludComponent implements OnInit{
 	
   }
 
-
+  public SaveWeight(values:any){
+  	this.a = values;
+  	console.log(this.a,"form values")
+  }
   public openCity(evt, cityName) {
     let i, tabcontent, tablinks;
 		try{

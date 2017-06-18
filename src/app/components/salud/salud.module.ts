@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms';
 import { SaludComponent } from './salud.component';
 //Services
 import { SaludService } from './../salud/salud.service';
@@ -13,6 +13,7 @@ import { MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, Md
   ],
   imports: [
     BrowserModule,
+    FormsModule,
    // BrowserAnimationsModule,
     MdCheckboxModule,
     MdDatepickerModule,
