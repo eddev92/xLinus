@@ -11,16 +11,17 @@
 		</div>
 	<div class="row mainPeso">
 		<div class="col-xs-12 col-md-6">
-			<form class="col-12">
+			<form class="col-12"
+			#userForm = "ngForm" (ngSubmit) = "SaveWeight(userForm.value)">
 			<div class="input-date">
 				<label>Fecha del último pesaje</label><br>
 			  	<input type="date" name="fecha" ngModel>
 			</div>
 			  	<md-input-container>
-			  <input mdInput placeholder="Ingresa el peso (KG)" name="model.peso" value="" ngModel>
+			  <input mdInput placeholder="Ingresa el peso (KG)" name="peso" value="" ngModel>
 			</md-input-container>
 
-			<button type="button" value="submit" (click)="SaveWeight(values)" class="btn btn-primary btn-lg btn-block">Guardar</button>
+			<button type="submit" value="submit" class="btn btn-primary btn-lg btn-block">Guardar peso</button>
 			</form>
 		</div>
 		<div class="col-xs-12 col-md-6">
@@ -50,8 +51,49 @@
 </div>
 
 <div id="talla" class="tabcontent">
-  <h3>Talla</h3>
-  <p>Paris is the capital of France.</p> 
+  <!-- <div class="row head">
+			<h3>Talla</h3><br>
+ 			 <p>(*) Administra el control de talla de tu bebe.</p>
+		</div>
+	<div class="row mainPeso">
+		<div class="col-xs-12 col-md-6">
+			<form class="col-12"
+			#userForm = "ngForm" (ngSubmit) = "SaveSize(userForm.value)">
+			<div class="input-date">
+				<label>Fecha del último pesaje</label><br>
+			  	<input type="date" name="fecha" ngModel>
+			</div>
+			  	<md-input-container>
+			  <input mdInput placeholder="Ingresa la talla" name="talla" value="" ngModel>
+			</md-input-container>
+
+			<button type="submit" value="submit" class="btn btn-primary btn-lg btn-block">Guardar talla</button>
+			</form>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<table class="table table-bordered">
+			  <thead class="thead-inverse">
+			    <tr>
+			      <th>#</th>
+			      <th>Fecha</th>
+			      <th>Talla</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  <tr *ngFor="let register of RegisterSize">
+			  	<th>{{register.id}}</th>
+			  	<td>{{register.fecha}}</td>
+			  	<td>{{register.talla}}</td>
+			  </tr>
+			   <tr>
+			      <th scope="row">1</th>
+			      <td>Otto</td>
+			      <td>@mdo</td>
+			    </tr>
+			  </tbody>
+			</table>
+		</div>		
+	</div> -->
 </div>
 
 <div id="otros" class="tabcontent">

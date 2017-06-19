@@ -18,14 +18,16 @@ import 'rxjs/add/operator/map';
 export class SaludComponent implements OnInit{
 
 	public Registers:any[];
-	public a:any;
-	 constructor(private saludService: SaludService,
+	public RegisterSize:any[];
+	constructor(private saludService: SaludService,
 	 				public route: ActivatedRoute) {}
+	
 
   public ngOnInit() {
   	this.saludService.getRegisters().subscribe(
      data => {       
      	this.Registers = data;
+     	this.RegisterSize = data;
 
         console.log(this.Registers, "Registers")
       },
@@ -37,10 +39,16 @@ export class SaludComponent implements OnInit{
 	
   }
 
-  public SaveWeight(values:any){
-  	this.a = values;
-  	console.log(this.a,"form values")
+  public SaveWeight(user:any){
+  	console.log(user);
+  	this.Registers.push({fecha: user.fecha, peso: user.peso })
   }
+
+    public SaveSize(size:any){
+  	console.log(size);
+  	this.RegisterSize.push({fecha: size.fecha, peso: size.talla })
+  }
+
   public openCity(evt, cityName) {
     let i, tabcontent, tablinks;
 		try{

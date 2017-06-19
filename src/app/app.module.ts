@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 // Components
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ export const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     JsonpModule,
     HttpModule,
+    FormsModule,
    // NoopAnimationsModule,
     BrowserAnimationsModule,
     MdInputModule,
