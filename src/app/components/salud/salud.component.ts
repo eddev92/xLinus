@@ -27,24 +27,36 @@ export class SaludComponent implements OnInit{
   	this.saludService.getRegisters().subscribe(
      data => {       
      	this.Registers = data;
-     	this.RegisterSize = data;
 
-        console.log(this.Registers, "Registers")
+        console.log(this.Registers, "Peso")
       },
       error => {
       	console.log(error, "error =/")
       }
    	);
 
-	
+   this.saludService.getSizes().subscribe(
+     data => {       
+     	this.RegisterSize = data;
+
+        console.log(this.Registers, "Talla")
+      },
+      error => {
+      	console.log(error, "error =/")
+      }
+   	);	
   }
 
   public SaveWeight(user:any){
   	console.log(user);
+  	const fecha: any= '';
+  	const peso: any= '';
   	this.Registers.push({fecha: user.fecha, peso: user.peso })
   }
 
     public SaveSize(size:any){
+    const fecha: any= '';
+  	const talla: any= '';
   	console.log(size);
   	this.RegisterSize.push({fecha: size.fecha, peso: size.talla })
   }

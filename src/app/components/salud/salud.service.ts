@@ -9,8 +9,10 @@ export class SaludService {
 	constructor(private serviceConstant: serviceConstant) {}
 
 	getRegisters(): Observable<any> {
-
 	return this.serviceConstant.get('peso');
-	  }
+	}
+	getSizes(): Observable<any> {
+	return this.serviceConstant.get('talla');
+	}
 
 }

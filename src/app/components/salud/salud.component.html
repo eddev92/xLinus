@@ -12,7 +12,7 @@
 	<div class="row mainPeso">
 		<div class="col-xs-12 col-md-6">
 			<form class="col-12"
-			#userForm = "ngForm" (ngSubmit) = "SaveWeight(userForm.value)">
+			#userFormWeight = "ngForm" (ngSubmit) = "SaveWeight(userFormWeight.value)">
 			<div class="input-date">
 				<label>Fecha del último pesaje</label><br>
 			  	<input type="date" name="fecha" ngModel>
@@ -51,7 +51,7 @@
 </div>
 
 <div id="talla" class="tabcontent">
-  <!-- <div class="row head">
+   <div class="row head">
 			<h3>Talla</h3><br>
  			 <p>(*) Administra el control de talla de tu bebe.</p>
 		</div>
@@ -80,20 +80,15 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			  <tr *ngFor="let register of RegisterSize">
-			  	<th>{{register.id}}</th>
-			  	<td>{{register.fecha}}</td>
-			  	<td>{{register.talla}}</td>
+			  <tr *ngFor="let size of RegisterSize">
+			  	<th>{{size.id}}</th>
+			  	<td>{{size.fecha}}</td>
+			  	<td>{{size.talla}}</td>
 			  </tr>
-			   <tr>
-			      <th scope="row">1</th>
-			      <td>Otto</td>
-			      <td>@mdo</td>
-			    </tr>
 			  </tbody>
 			</table>
 		</div>		
-	</div> -->
+	</div>
 </div>
 
 <div id="otros" class="tabcontent">
