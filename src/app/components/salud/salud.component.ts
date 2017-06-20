@@ -19,6 +19,8 @@ export class SaludComponent implements OnInit{
 
 	public Registers:any[];
 	public RegisterSize:any[];
+	public talla:any;
+	public peso:any;
 	constructor(private saludService: SaludService,
 	 				public route: ActivatedRoute) {}
 	
@@ -27,7 +29,6 @@ export class SaludComponent implements OnInit{
   	this.saludService.getRegisters().subscribe(
      data => {       
      	this.Registers = data;
-
         console.log(this.Registers, "Peso")
       },
       error => {
@@ -38,8 +39,7 @@ export class SaludComponent implements OnInit{
    this.saludService.getSizes().subscribe(
      data => {       
      	this.RegisterSize = data;
-
-        console.log(this.Registers, "Talla")
+        console.log(this.RegisterSize, "Talla")
       },
       error => {
       	console.log(error, "error =/")
@@ -49,16 +49,12 @@ export class SaludComponent implements OnInit{
 
   public SaveWeight(user:any){
   	console.log(user);
-  	const fecha: any= '';
-  	const peso: any= '';
-  	this.Registers.push({fecha: user.fecha, peso: user.peso })
+   	this.Registers.push({fecha: user.fecha, peso: user.peso })
   }
 
     public SaveSize(size:any){
-    const fecha: any= '';
-  	const talla: any= '';
   	console.log(size);
-  	this.RegisterSize.push({fecha: size.fecha, peso: size.talla })
+  	this.RegisterSize.push({fecha: size.fecha, talla: size.talla })
   }
 
   public openCity(evt, cityName) {
@@ -73,7 +69,6 @@ export class SaludComponent implements OnInit{
 		        tablinks[i].className = tablinks[i].className.replace(" active", "");
 		    }
 		    document.getElementById(cityName).style.display = "block";
-		    evt.currentTarget.className += " active";
 		}catch(er){
 			console.log(er)
 		}
