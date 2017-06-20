@@ -21,15 +21,31 @@ export class SaludComponent implements OnInit{
 	public RegisterSize:any[];
 	public talla:any;
 	public peso:any;
+	public emptyBlock:boolean;
 	constructor(private saludService: SaludService,
-	 				public route: ActivatedRoute) {}
-	
+	 				public route: ActivatedRoute) {
+		this.Registers = [
+			{	
+				name:'',
+				peso:''
+			}
+		];
+		this.RegisterSize = [
+			{	
+				name:'',
+				peso:''
+			}
+		];
+	}
+
+
 
   public ngOnInit() {
   	this.saludService.getRegisters().subscribe(
      data => {       
      	this.Registers = data;
-        console.log(this.Registers, "Peso")
+     	console.log(this.Registers.length,"cant peso")
+       console.log(this.Registers, "Peso")
       },
       error => {
       	console.log(error, "error =/")
@@ -39,6 +55,10 @@ export class SaludComponent implements OnInit{
    this.saludService.getSizes().subscribe(
      data => {       
      	this.RegisterSize = data;
+     	     	console.log(this.RegisterSize.length,"cant talla")
+
+     	     	this.RegisterSize.length===0 ?this.emptyBlock=true:false;
+
         console.log(this.RegisterSize, "Talla")
       },
       error => {
