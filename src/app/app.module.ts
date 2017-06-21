@@ -14,7 +14,7 @@ import { serviceConstant } from './core/core.services';
 // Components Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import { MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
+import { MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
 
 export const ROUTES: Routes = [
   { path: '',redirectTo: '/dashboard',pathMatch: 'full'},
@@ -38,6 +38,7 @@ export const ROUTES: Routes = [
     JsonpModule,
     HttpModule,
     FormsModule,
+    MdSliderModule,
    // NoopAnimationsModule,
     BrowserAnimationsModule,
     MdInputModule,

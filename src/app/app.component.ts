@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, AfterViewInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import * as jQuery from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,9 @@ export class AppComponent {
   constructor(private route: ActivatedRoute) {}
 
    ngOnInit() {
-    
+    $(".menu").click(function(){
+   $(".base").toggleClass("close");
+});
   }
+ 
 }
