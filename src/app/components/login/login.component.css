@@ -11,5 +11,10 @@
     height: 300px;
     margin-top: 113px;
     background-color: white;
-	padding: 68px 85px 85px;
+	padding: 33px 85px 85px;
+}
+#main-button{
+	position: absolute;
+	margin-left: -85px;
+    padding: 18px 49px;
 }

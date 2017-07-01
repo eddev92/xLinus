@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms';
 import { LoginComponent } from './login.component';
-import { MenuComponent } from '.tools/menu/menu.component';
+import { MenuComponent } from './../tools/menu/menu.component';
 import { MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
 
 @NgModule({
@@ -13,8 +13,8 @@ import { MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCh
   imports: [
     BrowserModule,
      MdSliderModule,
+     FormsModule,
    // NoopAnimationsModule,
-    BrowserAnimationsModule,
     MdInputModule,
     MdDatepickerModule,
     MdNativeDateModule,

@@ -1,18 +1,22 @@
 <!-- <menu></menu> -->
 <div class="container-fluid" id="main-login">
 	
-	<form class="col-8 example-form">
+	<form  class="col-6 example-form"
+   #userForm="ngForm" (ngSubmit)="onAuth(userForm.value)"
+  >
 	<h4>Login</h4>
   <md-input-container class="col-12 example-full-width">
-    <input mdInput placeholder="Usuario" value="">
+    <input mdInput placeholder="Usuario" name="user" value="" ngModel>
   </md-input-container>
 
  
    <md-input-container class="col-12 example-full-width">
-      <input mdInput type="password" placeholder="Password">
+      <input mdInput type="password" name="password" placeholder="Password" ngModel>
     </md-input-container>
 
- 
+  <div id="main-button" class="col-12">
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+  </div>
   </form>
 </div>
 
