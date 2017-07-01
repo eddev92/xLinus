@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'dashboard',
@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+	public dashboardActive: boolean;
+	constructor() {}
+
+	ngOnInit() {
+	}
 }

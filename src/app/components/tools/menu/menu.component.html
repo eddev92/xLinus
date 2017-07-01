@@ -1,0 +1,28 @@
+<div class="container-fluid" *ngIf="menu">
+<div id="mainMenu" ngClass="{{base}}" (click)="changeClass()">
+   <div class="menu">
+      <div class="icon">
+         <div class="bar"></div>
+      </div>
+   </div>
+   <div class="section">
+      <div class="cover1">
+         <div class="cover2">
+          <h4 *ngIf="h4">SALUD</h4>
+            <a class="content" routerLink="/salud"></a>
+         </div>
+      </div>
+   </div>
+   <a class="section-static top" routerLink="/alimentacion"><h4 *ngIf="h4">ALIMENTACIÓN</h4></a>
+   <a class="section-static bottom" routerLink="/educacion"><h4 *ngIf="h4">EDUCACIÓN</h4></a>
+</div>
+
+<div style="text-align:center;padding: 33px 53px;">
+  <h1>
+   Bienvenido al Portal
+  </h1><br>
+  <h2>{{name}}</h2>
+  <a routerLink="/dashboard">Ir a Home</a>
+</div>
+</div>
+<router-outlet></router-outlet>

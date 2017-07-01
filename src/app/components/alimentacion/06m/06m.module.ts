@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
-import { AlimentacionComponent } from './alimentacion.component';
-import { AlimentacionService } from './alimentacion.service';
+import { FirstDate06Component } from './06m.component';
+//import { AlimentacionService } from './alimentacion.service';
 
 @NgModule({
   declarations: [
-    AlimentacionComponent
+    FirstDate06Component
   ],
   imports: [
     BrowserModule,
@@ -17,7 +17,7 @@ import { AlimentacionService } from './alimentacion.service';
     MdInputModule,
     MdNativeDateModule,
   ],
-  providers: [AlimentacionService],
-  bootstrap: [AlimentacionComponent]
+  providers: [],
+  bootstrap: [FirstDate06Component]
 })
-export class AlimentacionModule { }
+export class FirstDate06Module { }

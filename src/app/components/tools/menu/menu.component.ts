@@ -1,17 +1,13 @@
 import { Component, OnInit, AfterViewInit, Input} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  //directive: [LoginComponent]
+  selector: 'menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class AppComponent {
-  public name:string="Linus Llanca";
-
-  constructor() {}
+export class MenuComponent {
+	 constructor(private route: ActivatedRoute) {}
   public base: any
   public h4: boolean;   
   public menu: boolean;
@@ -20,6 +16,7 @@ export class AppComponent {
       
    	this.base = 'base'
    	this.h4 = false;
+   	this.menu=true;
     if(this.menu){
       console.log('menu activado')
     }else{

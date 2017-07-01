@@ -1,11 +1,8 @@
-/* @offsetSize * 2 means the content won't appear to move at all. Set to a lower value for squishing effects. */
-/*////////////////////////////////////////*/
-/* Layout */
 @import 'https://fonts.googleapis.com/css?family=Oswald';
 .panels {
     width: 80%;
     margin: auto;
-    height: 50%;
+    height: 290px;
     overflow: hidden;
     background: #000;
     margin-bottom: 50px;

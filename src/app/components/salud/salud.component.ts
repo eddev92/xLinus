@@ -3,7 +3,6 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SaludService } from './../salud/salud.service';
-import { serviceConstant } from '../../core/core.services';
 import 'rxjs/add/operator/toPromise';
 
 import 'rxjs/add/operator/startWith';

@@ -57,6 +57,6 @@ export const ROUTES: Routes = [
     MdTabsModule
   ],
   providers: [serviceConstant],
-  bootstrap: [AppComponent]
+  bootstrap: [MenuComponent]
 })
 export class AppModule { }

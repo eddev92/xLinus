@@ -1,27 +1,18 @@
+<menu></menu>
 <div class="panels">
 <div class="panels__container">
-  <a href="#" class="panel">
+  <a *ngFor="let date of date1" routerLink="{{(date.id === 1) ? '06m' : ''}}" class="panel">
     <div class="panel__content" style="background-image: url(https://unsplash.it/1100/1100/?image=1007); background-position: 46% center;">
-    <h3 class="panel__title">0 - 6 meses</h3>
-    </div>
-  </a>
-  <a href="#" class="panel">
-    <div class="panel__content" style="background-image: url(https://unsplash.it/1100/1100/?image=883)">
-    <h3 class="panel__title">6 - 12 meses</h3>
+    <h3 class="panel__title">{{date.inicio}} - {{date.fin}} meses</h3>
     </div>
   </a>
 </div>
 </div>
 <div class="panels">
 <div class="panels__container">
-  <a href="#" class="panel">
+  <a *ngFor="let item of date2"href="#" class="panel">
     <div class="panel__content" style="background-image: url(https://unsplash.it/1100/1100/?image=1007); background-position: 46% center;">
-    <h3 class="panel__title">12 - 24 meses</h3>
-    </div>
-  </a>
-  <a href="#" class="panel">
-    <div class="panel__content" style="background-image: url(https://unsplash.it/1100/1100/?image=883)">
-    <h3 class="panel__title">24 - 36 meses</h3>
+    <h3 class="panel__title">{{item.inicio}} - {{item.fin}} meses</h3>
     </div>
   </a>
 </div>
