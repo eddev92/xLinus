@@ -17,7 +17,7 @@ import { serviceConstant } from './core/core.services';
 // Components Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import { MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
+import { MdSelectModule, MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
 
 export const ROUTES: Routes = [
   { path: '',redirectTo: '/login',pathMatch: 'full'},
@@ -47,6 +47,7 @@ export const ROUTES: Routes = [
     HttpModule,
     FormsModule,
     MdSliderModule,
+    MdSelectModule,
    // NoopAnimationsModule,
     BrowserAnimationsModule,
     MdInputModule,

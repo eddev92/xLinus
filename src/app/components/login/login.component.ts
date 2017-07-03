@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppComponent } from '../../app.component';
 // Services
 import { LoginService } from '../login/login.service';
@@ -21,12 +21,12 @@ export interface IUser {
  providers: [LoginService]
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 	public loginMenu: boolean;
 	public loginActivated: boolean;
 	constructor(private appComponent : AppComponent,
 				private loginService : LoginService,
-				) {}
+				private router : Router) {}
 
 	ngOnInit() {
 		this.loginActivated = true;
@@ -42,10 +42,17 @@ export class LoginComponent {
 		console.log(body,'body')
 		this.loginService.getAuth(body).subscribe(
 			data =>{
-			console.log(data)				
+			console.log(data, 'data login');
+			const userAth = data.username;
+			const passAth = data.password;
+			if(body.user === userAth && body.password === passAth){
+				this.router.navigate(['/dashboard']);	
+			}else{
+				alert('usuario invalido')
+			}
 		},
 		error => {
-			
+
 		}
 		);
 	}

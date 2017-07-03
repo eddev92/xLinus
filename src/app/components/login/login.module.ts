@@ -12,9 +12,8 @@ import { MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCh
   ],
   imports: [
     BrowserModule,
-     MdSliderModule,
-     FormsModule,
-   // NoopAnimationsModule,
+    MdSliderModule,
+    FormsModule,
     MdInputModule,
     MdDatepickerModule,
     MdNativeDateModule,

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { MdSelectModule, MdSliderModule, MdInputModule, MdButtonModule, MdNativeDateModule, MdCheckboxModule, MdTabsModule, MdDatepickerModule } from '@angular/material';
 import { EducacionComponent } from './educacion.component';
 
 @NgModule({
@@ -8,7 +8,13 @@ import { EducacionComponent } from './educacion.component';
     EducacionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MdDatepickerModule,
+    MdSelectModule,
+    MdNativeDateModule,
+    MdCheckboxModule,
+    MdButtonModule,
+    MdTabsModule
   ],
   providers: [],
   bootstrap: [EducacionComponent]

@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./salud.component.css'],
   providers: [SaludService]
 })
-export class SaludComponent implements OnInit{
+export class SaludComponent implements OnInit {
 
 	public Registers:any[];
 	public RegisterSize:any[];
